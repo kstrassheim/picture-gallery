@@ -1,0 +1,16 @@
+﻿<div class="container">
+    <div>
+        <input class="form-control" type="button" ng-click="Save()" value="Save" />
+        <input class="form-control" type="button" ng-click="Cancel()" value="Cancel" />
+    </div>
+    <div>
+        <label for="Title">Title:</label>
+    </div>
+    <div>
+        <input id="title" class="form-control" type="text" ng-model="Item.Title" ng-required="true" /> 
+    </div>
+    <div>
+        <label for="Title">Image:</label>
+    </div>
+    <div imageupload image="Item.File"></div>
+</div>

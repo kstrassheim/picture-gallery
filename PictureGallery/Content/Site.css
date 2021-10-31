@@ -1,0 +1,105 @@
+﻿@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+html {
+    width:100%;
+    height:100%;
+     overflow:hidden;
+}
+
+body {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    width:100%;
+    height:100%;
+    overflow:auto;
+}
+
+.body-content {
+    width:100%;
+    height:100%;
+}
+
+#gallery {
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+#gallery .item {
+    position: absolute !important;
+    display: inline-block;
+    border: 5px solid black;
+    border-radius: 10px;
+    touch-action: none;
+    animation-iteration-count: infinite;
+}
+
+#gallery .item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    /*border: 1px solid red;*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.loading {
+    z-index:9999 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4c4b4b;
+    opacity: 0.7;
+    pointer-events: auto;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+}
+
+.loading-message {
+    text-align: center;
+    margin: 10% 0 0 0;
+    font-size: 800%;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    -webkit-text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: monospace;
+    color: #F58A00;
+    padding: 0;
+}
+
+.fadein, .fadeout {
+    opacity: 0;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+}
+.fadein {
+    opacity: 1;
+}

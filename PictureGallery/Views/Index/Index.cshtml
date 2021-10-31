@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="mobile-wep-app-capable" content="yes">
+    <meta name="apple-mobile-wep-app-capable" content="yes">
+    <title>Picture-Gallery</title>
+    <link rel="shortcut icon" href="~/Content/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="~/Content/favicon.ico" type="image/x-icon" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/Scripts/vendor")
+    <link rel="apple-touch-icon" href="~/Content/icon-192x192.png" />
+</head>
+<body id="body">
+    <script src="signalr/hubs"></script>
+    <div class="loading" style="display:none">
+        <div class="loading-message">LOADING</div>
+    </div>
+    <div id="navigation" ng-controller="NavigationCtrl" class="fadeout navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-repeat="item in list"><a ng-click="click(item.url)">{{item.title}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="btnTriggerDisplay" style="z-index:9999;position:absolute;  width:25px; height:25px; right:0px; top:0px"></div>
+    <script type="text/javascript">$("#btnTriggerDisplay").click(function() { if ($('#navigation').hasClass('fadeout')) $('#navigation').removeClass('fadeout').addClass('fadein'); else  $('#navigation').removeClass('fadein').addClass('fadeout'); });</script>
+    <div class="body-content" ng-view>
+
+    </div>
+    @MvcHtmlString.Create(PictureGallery.AngularConfig.GetConfig())
+    @Scripts.Render("~/Scripts/app")
+</body>
+</html>

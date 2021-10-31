@@ -1,5 +1,5 @@
 # Picture-Gallery (2014)
-The purpose of this project is to show the possibility of an intuitive Real-Time responsive webapplication without buttons. 
+A simple whiteboard for pictures to enable cooperative working. The purpose was to show the possibility of an intuitive, real-time, responsive and progressive web-application **without buttons and text**.
 A demo of this application can be seen at: https://picture-gallery.azurewebsites.net
 
 ## Abstract-Keywords

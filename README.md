@@ -6,7 +6,7 @@ A demo of this application can be seen at: https://picture-gallery.azurewebsites
 Buttonless, Real-Time, Progressive Web App (PWA)
 
 ## Technical-Keywords
-C#, JavaScript, TypeScript, SQLServer, AngularJS, ASP.NET,  WebApi (Async), SignalR, Websockets, JQuery, JQuery-UI, .NET 4.8, Azure SQLServer, Azure Web App
+C#, JavaScript, TypeScript, SQLServer, AngularJS, ASP.NET,  WebApi (Async), SignalR, Websockets, JQuery, JQuery-UI, .NET 4.8, Azure SQLServer, Azure Web App, Entity Framework (Code First)
 
 ## User Manual
 1. At start the loading screen appears showing the loading status in % (!Through real-time abbility the status can be updated from the server side also)
@@ -32,4 +32,6 @@ C#, JavaScript, TypeScript, SQLServer, AngularJS, ASP.NET,  WebApi (Async), Sign
 			<add name="PictureGalleryContext" connectionString="Server=localhost;Initial Catalog=picture-gallery-db;Persist Security Info=False;User ID=TODO;Password=F1ll_Y0UR_PW;" providerName="System.Data.SqlClient" />
 		</connectionStrings>
 		
-6. Build Project in Visual Studio and Start Debugging
+6. Build Project in Visual Studio and Run in Debug Mode
+7. Database will be created automatically inside an empty db which you gave as config if it does not exists (EF Code First)
+8. (Optional) You can whether upload the images in /example-pics folder, by dropping them onto the website, or run /db_init_examples_script.sql in the new db to create some content

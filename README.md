@@ -1,5 +1,5 @@
 # Picture-Gallery (2014)
-A simple whiteboard for pictures to enable cooperative working. The purpose was to show the possibility of an intuitive, real-time, responsive and progressive web-application **without buttons and text**.
+This Real-Time Web application has the goal to provide a whiteboard for multiple users to exchange images while editing them in the most intuitive way without buttons (size via pinch and layer via double click). The changes are distributed immediately to all other users while the frame color serves as the user-id. The purpose was to show the possibility of an intuitive, real-time, responsive and progressive web-application **without buttons and text**.
 A demo of this application can be seen at: https://picture-gallery.azurewebsites.net
 
 ## Abstract-Keywords
